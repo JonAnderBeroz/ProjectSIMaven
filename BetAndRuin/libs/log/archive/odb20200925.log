@@ -1,0 +1,70 @@
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-09-25 12:52:55 #1 store] 
+Database 'C:\Users\Jon Ander\git\ProjectSI\BetAndRuin\resources\bets.temp' is opened by 6676@LAPTOP-Q6JRT6VR
+
+[2020-09-25 12:52:55 #2 store] 
+Configuration path: ?
+
+[2020-09-25 12:52:55 #3 type] 
+Type domain.Event is not enhanced.
+
+[2020-09-25 12:52:55 #4 type] 
+Type domain.Question is not enhanced.
+
+[2020-09-25 12:52:55 #5 type] 
+Type domain.Competition is not enhanced.
+
+[2020-09-25 12:52:55 #6 type] 
+Type domain.Prediction is not enhanced.
+
+[2020-09-25 12:53:01 #7 type] 
+Type domain.User is not enhanced.
+
+[2020-09-25 12:53:01 #8 type] 
+Type domain.CreditCard is not enhanced.
+
+[2020-09-25 12:53:01 #9 type] 
+Type domain.Bet is not enhanced.
+
+[2020-09-25 12:53:01 #10 type] 
+Type domain.Profile is not enhanced.
+
+[2020-09-25 12:53:12 #11 type] 
+Type domain.FeedbackRecord is not enhanced.
+
+[2020-09-25 12:53:12 #12 type] 
+Type domain.Feedback is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-09-25 12:53:54 #1 store] 
+Database 'C:\Users\Jon Ander\git\ProjectSI\BetAndRuin\resources\bets.temp' is opened by 3512@LAPTOP-Q6JRT6VR
+
+[2020-09-25 12:53:54 #2 store] 
+Configuration path: ?
+
+[2020-09-25 12:53:54 #3 type] 
+Type domain.Event is not enhanced.
+
+[2020-09-25 12:53:54 #4 type] 
+Type domain.Question is not enhanced.
+
+[2020-09-25 12:53:55 #5 type] 
+Type domain.Competition is not enhanced.
+
+[2020-09-25 12:53:55 #6 type] 
+Type domain.Prediction is not enhanced.
+
+[2020-09-25 12:54:00 #7 type] 
+Type domain.User is not enhanced.
+
+[2020-09-25 12:54:00 #8 type] 
+Type domain.CreditCard is not enhanced.
+
+[2020-09-25 12:54:00 #9 type] 
+Type domain.Bet is not enhanced.
+
+[2020-09-25 12:54:00 #10 type] 
+Type domain.Profile is not enhanced.
+

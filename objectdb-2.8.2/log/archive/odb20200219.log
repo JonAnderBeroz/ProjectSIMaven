@@ -1,0 +1,28 @@
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-19 16:20:27 #1 store] 
+Database 'C:\Users\Usuario\Desktop\SE_project\Bets\Bets\resources\bets.temp' has been recovered (tr. 1-5)
+
+[2020-02-19 16:20:27 #2 store] 
+Database 'C:\Users\Usuario\Desktop\SE_project\Bets\Bets\resources\bets.temp' is opened by 14740@DESKTOP-00OS7EM
+
+[2020-02-19 16:20:27 #3 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-19 16:24:44 #4 store] 
+Database 'C:\Users\Usuario\Desktop\SE_project\Bets\Bets\resources\bets.temp' is closed by 14740@DESKTOP-00OS7EM
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-19 22:42:01 #1 store] 
+Database 'C:\Users\Usuario\git\betnruin\Bets\resources\bets.temp' has been recovered (tr. 1-5)
+
+[2020-02-19 22:42:01 #2 store] 
+Database 'C:\Users\Usuario\git\betnruin\Bets\resources\bets.temp' is opened by 4404@DESKTOP-00OS7EM
+
+[2020-02-19 22:42:01 #3 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-19 22:53:58 #4 store] 
+Database 'C:\Users\Usuario\git\betnruin\Bets\resources\bets.temp' is closed by 4404@DESKTOP-00OS7EM
+

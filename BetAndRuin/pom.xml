@@ -1,0 +1,92 @@
+	<project xmlns="http://maven.apache.org/POM/4.0.0"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+		<modelVersion>4.0.0</modelVersion>
+		<groupId>BetAndRuin</groupId>
+		<artifactId>BetAndRuin</artifactId>
+		<name>ProjectSI</name>
+		<version>0.0.1-SNAPSHOT</version>
+		<build>
+			<sourceDirectory>src</sourceDirectory>
+			<plugins>
+				<plugin>
+					<groupId>org.jacoco</groupId>
+					<artifactId>jacoco-maven-plugin</artifactId>
+					<version>0.8.5</version>
+					<executions>
+						<execution>
+							<id>prepare-agent</id>
+							<goals>
+								<goal>prepare-agent</goal>
+							</goals>
+						</execution>
+						<execution>
+							<id>report</id>
+							<phase>prepare-package</phase>
+							<goals>
+								<goal>report</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+			</plugins>
+		</build>
+		<properties>
+			<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+			<maven.compiler.source>1.8</maven.compiler.source>
+			<maven.compiler.target>1.8</maven.compiler.target>
+			<sonar.projectKey>projectSI</sonar.projectKey>
+			<sonar.organization>jonanderberoz</sonar.organization>
+			<sonar.host.url>https://sonarcloud.io</sonar.host.url>
+			<sonar.login>4d15b7516deda9260a68561e3bc35cb49bcdb2f2</sonar.login>
+		</properties>
+		<dependencies>
+			<!-- https://mvnrepository.com/artifact/javax.activation/activation -->
+			<dependency>
+				<groupId>javax.activation</groupId>
+				<artifactId>activation</artifactId>
+				<version>1.1.1</version>
+			</dependency>
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>3.8.1</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>javax</groupId>
+				<artifactId>javaee-web-api</artifactId>
+				<version>6.0</version>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/com.miglayout/miglayout -->
+			<dependency>
+				<groupId>com.miglayout</groupId>
+				<artifactId>miglayout</artifactId>
+				<version>3.7.4</version>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/com.toedter/jcalendar -->
+			<dependency>
+				<groupId>com.toedter</groupId>
+				<artifactId>jcalendar</artifactId>
+				<version>1.4</version>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/com.jgoodies/forms -->
+			<dependency>
+				<groupId>com.jgoodies</groupId>
+				<artifactId>forms</artifactId>
+				<version>1.2.1</version>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/org.mindrot/jbcrypt -->
+			<dependency>
+				<groupId>org.mindrot</groupId>
+				<artifactId>jbcrypt</artifactId>
+				<version>0.3m</version>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/com.jgoodies/jgoodies-forms -->
+			<dependency>
+				<groupId>com.jgoodies</groupId>
+				<artifactId>jgoodies-forms</artifactId>
+				<version>1.6.0</version>
+			</dependency>
+		</dependencies>
+	</project>

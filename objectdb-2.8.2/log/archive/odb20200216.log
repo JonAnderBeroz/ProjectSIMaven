@@ -1,0 +1,1407 @@
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 00:49:26 #1 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is opened by 10452@DESKTOP-00OS7EM
+
+[2020-02-16 00:49:26 #2 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 00:49:32 #1 explorer] 
+[ObjectDB 2.8.2] javax.persistence.PersistenceException
+Attempt to open a database file 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' that is currently in use by another process (error 141)
+	at com.objectdb.Explorer$1.run(Explorer.java:57)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+Caused by: com.objectdb.o.UserException: Attempt to open a database file 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' that is currently in use by another process
+	at com.objectdb.o.MSG.a(MSG.java:64)
+	at com.objectdb.o.LFL.J(LFL.java:930)
+	at com.objectdb.o.LFL.x(LFL.java:887)
+	at com.objectdb.o.LFL.x(LFL.java:797)
+	at com.objectdb.o.DFL.<init>(DFL.java:241)
+	at com.objectdb.o.DMG.<init>(DMG.java:27)
+	at com.objectdb.o.MST.<init>(MST.java:127)
+	at com.objectdb.o.MST.ap(MST.java:109)
+	at com.objectdb.o.MSF.Y3(MSF.java:190)
+	at com.objectdb.o.OMF.s(OMF.java:804)
+	at com.objectdb.jpa.EMF.s(EMF.java:130)
+	at com.objectdb.o.OMF.x(OMF.java:715)
+	at com.objectdb.jpa.EMF.createEntityManager(EMF.java:149)
+	... 17 more
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 00:49:34 #1 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is opened by 5284@DESKTOP-00OS7EM
+
+[2020-02-16 00:49:34 #2 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-16 00:49:38 #3 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is closed by 5284@DESKTOP-00OS7EM
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 00:51:06 #1 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is opened by 12028@DESKTOP-00OS7EM
+
+[2020-02-16 00:51:06 #2 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-16 00:51:06 #3 type] 
+Type domain.Flight is not enhanced.
+
+[2020-02-16 00:51:06 #4 type] 
+Type domain.ConcreteFlight is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 00:51:13 #1 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' has been recovered (tr. 279-299)
+
+[2020-02-16 00:51:13 #2 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is opened by 10608@DESKTOP-00OS7EM
+
+[2020-02-16 00:51:13 #3 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-16 00:58:12 #4 explorer] 
+com.objectdb.o.UserException: Unexpected database state: BTree 46 is not found
+	at com.objectdb.o.MSG.a(MSG.java:64)
+	at com.objectdb.o.UTT.r(UTT.java:324)
+	at com.objectdb.o.UTT.g(UTT.java:210)
+	at com.objectdb.o.TSK.b(TSK.java:146)
+	at com.objectdb.o.TSK.c(TSK.java:96)
+	at com.objectdb.o.MST.f(MST.java:1509)
+	at com.objectdb.o.MST.Zr(MST.java:1372)
+	at com.objectdb.o.PRG.h(PRG.java:612)
+	at com.objectdb.o.PRG.g(PRG.java:560)
+	at com.objectdb.o.QRM.ZU(QRM.java:287)
+	at com.objectdb.o.MST.ZU(MST.java:1019)
+	at com.objectdb.o.WRA.ZU(WRA.java:313)
+	at com.objectdb.o.WSM.ZU(WSM.java:117)
+	at com.objectdb.o.QRR.k(QRR.java:260)
+	at com.objectdb.o.QRR.i(QRR.java:154)
+	at com.objectdb.jpa.JpaQuery.getSingleResult(JpaQuery.java:755)
+	at com.objectdb.o.ETI.getChildCount(ETI.java:84)
+	at com.objectdb.o.TableMemberMapper.<init>(TableMemberMapper.java:64)
+	at com.objectdb.o.ItemTableModel.<init>(ItemTableModel.java:47)
+	at com.objectdb.o.ItemTablePanel.g(ItemTablePanel.java:184)
+	at com.objectdb.o.MainFrame.f(MainFrame.java:235)
+	at com.objectdb.o.MainFrame.f(MainFrame.java:233)
+	at com.objectdb.o.MainFrame.f(MainFrame.java:233)
+	at com.objectdb.o.MainFrame.f(MainFrame.java:233)
+	at com.objectdb.o.MainFrame.f(MainFrame.java:233)
+	at com.objectdb.o.MainFrame.f(MainFrame.java:233)
+	at com.objectdb.o.MainFrame.f(MainFrame.java:233)
+	at com.objectdb.o.MainFrame.f(MainFrame.java:233)
+	at com.objectdb.o.MainFrame.f(MainFrame.java:233)
+	at com.objectdb.o.MainFrame.f(MainFrame.java:233)
+	at com.objectdb.o.MainFrame.f(MainFrame.java:233)
+	at com.objectdb.o.MainFrame.e(MainFrame.java:218)
+	at com.objectdb.o.EXA.k(EXA.java:196)
+	at com.objectdb.o.EXA.j(EXA.java:188)
+	at com.objectdb.o.EXA.i(EXA.java:176)
+	at com.objectdb.o.SchemaPanel.k(SchemaPanel.java:277)
+	at com.objectdb.o.SchemaPanel.Yr(SchemaPanel.java:195)
+	at com.objectdb.o.RTR.Yr(RTR.java:71)
+	at com.objectdb.o.Command.actionPerformed(Command.java:471)
+	at javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
+	at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
+	at javax.swing.DefaultButtonModel.setPressed(Unknown Source)
+	at javax.swing.AbstractButton.doClick(Unknown Source)
+	at javax.swing.plaf.basic.BasicMenuItemUI.doClick(Unknown Source)
+	at javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(Unknown Source)
+	at java.awt.Component.processMouseEvent(Unknown Source)
+	at javax.swing.JComponent.processMouseEvent(Unknown Source)
+	at java.awt.Component.processEvent(Unknown Source)
+	at java.awt.Container.processEvent(Unknown Source)
+	at java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+
+[2020-02-16 00:58:24 #5 explorer] 
+com.objectdb.o.UserException: Unexpected database state: BTree 46 is not found
+	at com.objectdb.o.MSG.a(MSG.java:64)
+	at com.objectdb.o.UTT.r(UTT.java:324)
+	at com.objectdb.o.UTT.g(UTT.java:210)
+	at com.objectdb.o.TSK.b(TSK.java:146)
+	at com.objectdb.o.TSK.c(TSK.java:96)
+	at com.objectdb.o.MST.f(MST.java:1509)
+	at com.objectdb.o.MST.Zr(MST.java:1372)
+	at com.objectdb.o.PRG.h(PRG.java:612)
+	at com.objectdb.o.PRG.g(PRG.java:560)
+	at com.objectdb.o.QRM.ZU(QRM.java:287)
+	at com.objectdb.o.MST.ZU(MST.java:1019)
+	at com.objectdb.o.WRA.ZU(WRA.java:313)
+	at com.objectdb.o.WSM.ZU(WSM.java:117)
+	at com.objectdb.o.QRR.k(QRR.java:260)
+	at com.objectdb.o.QRR.i(QRR.java:154)
+	at com.objectdb.jpa.JpaQuery.getSingleResult(JpaQuery.java:755)
+	at com.objectdb.o.ETI.getChildCount(ETI.java:84)
+	at com.objectdb.o.TableMemberMapper.<init>(TableMemberMapper.java:64)
+	at com.objectdb.o.ItemTableModel.<init>(ItemTableModel.java:47)
+	at com.objectdb.o.ItemTablePanel.g(ItemTablePanel.java:184)
+	at com.objectdb.o.MainFrame.f(MainFrame.java:235)
+	at com.objectdb.o.MainFrame.f(MainFrame.java:233)
+	at com.objectdb.o.MainFrame.f(MainFrame.java:233)
+	at com.objectdb.o.MainFrame.f(MainFrame.java:233)
+	at com.objectdb.o.MainFrame.f(MainFrame.java:233)
+	at com.objectdb.o.MainFrame.f(MainFrame.java:233)
+	at com.objectdb.o.MainFrame.f(MainFrame.java:233)
+	at com.objectdb.o.MainFrame.f(MainFrame.java:233)
+	at com.objectdb.o.MainFrame.f(MainFrame.java:233)
+	at com.objectdb.o.MainFrame.f(MainFrame.java:233)
+	at com.objectdb.o.MainFrame.f(MainFrame.java:233)
+	at com.objectdb.o.MainFrame.e(MainFrame.java:218)
+	at com.objectdb.o.EXA.k(EXA.java:196)
+	at com.objectdb.o.EXA.j(EXA.java:188)
+	at com.objectdb.o.EXA.i(EXA.java:176)
+	at com.objectdb.o.SchemaPanel.k(SchemaPanel.java:277)
+	at com.objectdb.o.SchemaPanel.Yr(SchemaPanel.java:195)
+	at com.objectdb.o.RTR.Yr(RTR.java:71)
+	at com.objectdb.o.Command.actionPerformed(Command.java:471)
+	at javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
+	at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
+	at javax.swing.DefaultButtonModel.setPressed(Unknown Source)
+	at javax.swing.AbstractButton.doClick(Unknown Source)
+	at javax.swing.plaf.basic.BasicMenuItemUI.doClick(Unknown Source)
+	at javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(Unknown Source)
+	at java.awt.Component.processMouseEvent(Unknown Source)
+	at javax.swing.JComponent.processMouseEvent(Unknown Source)
+	at java.awt.Component.processEvent(Unknown Source)
+	at java.awt.Container.processEvent(Unknown Source)
+	at java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+
+[2020-02-16 00:58:42 #6 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is closed by 10608@DESKTOP-00OS7EM
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 00:58:44 #1 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is opened by 8764@DESKTOP-00OS7EM
+
+[2020-02-16 00:58:44 #2 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-16 00:58:48 #3 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is closed by 8764@DESKTOP-00OS7EM
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 00:58:52 #1 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is opened by 5008@DESKTOP-00OS7EM
+
+[2020-02-16 00:58:52 #2 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-16 00:58:52 #3 type] 
+Type domain.Flight is not enhanced.
+
+[2020-02-16 00:58:52 #4 type] 
+Type domain.ConcreteFlight is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 00:59:00 #1 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' has been recovered (tr. 305-325)
+
+[2020-02-16 00:59:00 #2 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is opened by 3760@DESKTOP-00OS7EM
+
+[2020-02-16 00:59:00 #3 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-16 00:59:24 #4 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is closed by 3760@DESKTOP-00OS7EM
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 00:59:33 #1 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is opened by 11372@DESKTOP-00OS7EM
+
+[2020-02-16 00:59:33 #2 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-16 00:59:33 #3 type] 
+Type domain.Flight is not enhanced.
+
+[2020-02-16 00:59:33 #4 type] 
+Type domain.ConcreteFlight is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 01:01:49 #1 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is opened by 14280@DESKTOP-00OS7EM
+
+[2020-02-16 01:01:49 #2 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-16 01:01:49 #3 type] 
+Type domain.Flight is not enhanced.
+
+[2020-02-16 01:01:49 #4 type] 
+Type domain.ConcreteFlight is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 01:05:39 #1 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' has been recovered (tr. 326-326)
+
+[2020-02-16 01:05:39 #2 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is opened by 1560@DESKTOP-00OS7EM
+
+[2020-02-16 01:05:39 #3 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-16 01:05:40 #4 type] 
+Type domain.Flight is not enhanced.
+
+[2020-02-16 01:05:40 #5 type] 
+Type domain.ConcreteFlight is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 01:42:52 #1 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is opened by 9072@DESKTOP-00OS7EM
+
+[2020-02-16 01:42:52 #2 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-16 01:42:52 #3 type] 
+Type domain.Flight is not enhanced.
+
+[2020-02-16 01:42:52 #4 type] 
+Type domain.ConcreteFlight is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 01:46:34 #1 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' has been recovered (tr. 327-327)
+
+[2020-02-16 01:46:34 #2 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is opened by 8944@DESKTOP-00OS7EM
+
+[2020-02-16 01:46:34 #3 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-16 01:46:34 #4 type] 
+Type domain.Flight is not enhanced.
+
+[2020-02-16 01:46:34 #5 type] 
+Type domain.ConcreteFlight is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 01:48:16 #1 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' has been recovered (tr. 328-328)
+
+[2020-02-16 01:48:16 #2 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is opened by 2528@DESKTOP-00OS7EM
+
+[2020-02-16 01:48:16 #3 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-16 01:48:17 #4 type] 
+Type domain.Flight is not enhanced.
+
+[2020-02-16 01:48:17 #5 type] 
+Type domain.ConcreteFlight is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 01:50:45 #1 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' has been recovered (tr. 329-330)
+
+[2020-02-16 01:50:45 #2 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is opened by 2176@DESKTOP-00OS7EM
+
+[2020-02-16 01:50:45 #3 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-16 01:50:45 #4 type] 
+Type domain.Flight is not enhanced.
+
+[2020-02-16 01:50:45 #5 type] 
+Type domain.ConcreteFlight is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 01:51:19 #1 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is opened by 6484@DESKTOP-00OS7EM
+
+[2020-02-16 01:51:19 #2 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-16 01:51:19 #3 type] 
+Type domain.Flight is not enhanced.
+
+[2020-02-16 01:51:19 #4 type] 
+Type domain.ConcreteFlight is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 01:53:08 #1 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' has been recovered (tr. 331-331)
+
+[2020-02-16 01:53:08 #2 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is opened by 13800@DESKTOP-00OS7EM
+
+[2020-02-16 01:53:08 #3 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-16 01:53:08 #4 type] 
+Type domain.Flight is not enhanced.
+
+[2020-02-16 01:53:08 #5 type] 
+Type domain.ConcreteFlight is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 01:56:57 #1 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is opened by 468@DESKTOP-00OS7EM
+
+[2020-02-16 01:56:57 #2 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-16 01:56:57 #3 type] 
+Type domain.Flight is not enhanced.
+
+[2020-02-16 01:56:57 #4 type] 
+Type domain.ConcreteFlight is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 02:02:31 #1 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is opened by 7444@DESKTOP-00OS7EM
+
+[2020-02-16 02:02:31 #2 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-16 02:02:31 #3 type] 
+Type domain.Flight is not enhanced.
+
+[2020-02-16 02:02:31 #4 type] 
+Type domain.ConcreteFlight is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 11:14:30 #1 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' has been recovered (tr. 332-332)
+
+[2020-02-16 11:14:30 #2 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is opened by 12428@DESKTOP-00OS7EM
+
+[2020-02-16 11:14:30 #3 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-16 11:14:30 #4 type] 
+Type domain.Flight is not enhanced.
+
+[2020-02-16 11:14:30 #5 type] 
+Type domain.ConcreteFlight is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 11:14:34 #1 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' has been recovered (tr. 333-333)
+
+[2020-02-16 11:14:34 #2 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is opened by 14064@DESKTOP-00OS7EM
+
+[2020-02-16 11:14:34 #3 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-16 11:14:34 #4 type] 
+Type domain.Flight is not enhanced.
+
+[2020-02-16 11:14:34 #5 type] 
+Type domain.ConcreteFlight is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 11:14:41 #1 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is opened by 4404@DESKTOP-00OS7EM
+
+[2020-02-16 11:14:41 #2 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-16 11:14:41 #3 type] 
+Type domain.Flight is not enhanced.
+
+[2020-02-16 11:14:41 #4 type] 
+Type domain.ConcreteFlight is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 11:14:46 #1 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' has been recovered (tr. 334-334)
+
+[2020-02-16 11:14:46 #2 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is opened by 5392@DESKTOP-00OS7EM
+
+[2020-02-16 11:14:46 #3 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-16 11:14:46 #4 type] 
+Type domain.Flight is not enhanced.
+
+[2020-02-16 11:14:46 #5 type] 
+Type domain.ConcreteFlight is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 11:57:32 #1 explorer] 
+[ObjectDB 2.8.2] javax.persistence.PersistenceException
+Attempt to open a database file 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' that is currently in use by another process (error 141)
+	at com.objectdb.Explorer$1.run(Explorer.java:57)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+Caused by: com.objectdb.o.UserException: Attempt to open a database file 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' that is currently in use by another process
+	at com.objectdb.o.MSG.a(MSG.java:64)
+	at com.objectdb.o.LFL.J(LFL.java:930)
+	at com.objectdb.o.LFL.x(LFL.java:887)
+	at com.objectdb.o.LFL.x(LFL.java:797)
+	at com.objectdb.o.DFL.<init>(DFL.java:241)
+	at com.objectdb.o.DMG.<init>(DMG.java:27)
+	at com.objectdb.o.MST.<init>(MST.java:127)
+	at com.objectdb.o.MST.ap(MST.java:109)
+	at com.objectdb.o.MSF.Y3(MSF.java:190)
+	at com.objectdb.o.OMF.s(OMF.java:804)
+	at com.objectdb.jpa.EMF.s(EMF.java:130)
+	at com.objectdb.o.OMF.x(OMF.java:715)
+	at com.objectdb.jpa.EMF.createEntityManager(EMF.java:149)
+	... 17 more
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 11:57:36 #1 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' has been recovered (tr. 335-336)
+
+[2020-02-16 11:57:36 #2 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is opened by 2700@DESKTOP-00OS7EM
+
+[2020-02-16 11:57:36 #3 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-16 12:00:13 #4 explorer] 
+[ObjectDB 2.8.2] java.lang.IllegalArgumentException
+Attempt to remove a detached entity object [ConcreteFlight:'PLOF324'] (error 635)
+	at javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
+	at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
+	at javax.swing.DefaultButtonModel.setPressed(Unknown Source)
+	at javax.swing.AbstractButton.doClick(Unknown Source)
+	at javax.swing.plaf.basic.BasicMenuItemUI.doClick(Unknown Source)
+	at javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(Unknown Source)
+	at java.awt.Component.processMouseEvent(Unknown Source)
+	at javax.swing.JComponent.processMouseEvent(Unknown Source)
+	at java.awt.Component.processEvent(Unknown Source)
+	at java.awt.Container.processEvent(Unknown Source)
+	at java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+
+[2020-02-16 12:00:28 #5 explorer] 
+[ObjectDB 2.8.2] java.lang.IllegalArgumentException
+Attempt to lock a non entity object [ConcreteFlight:'PLOF027'] (error 635)
+	at javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
+	at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
+	at javax.swing.DefaultButtonModel.setPressed(Unknown Source)
+	at javax.swing.AbstractButton.doClick(Unknown Source)
+	at javax.swing.plaf.basic.BasicMenuItemUI.doClick(Unknown Source)
+	at javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(Unknown Source)
+	at java.awt.Component.processMouseEvent(Unknown Source)
+	at javax.swing.JComponent.processMouseEvent(Unknown Source)
+	at java.awt.Component.processEvent(Unknown Source)
+	at java.awt.Container.processEvent(Unknown Source)
+	at java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+
+[2020-02-16 12:00:30 #6 explorer] 
+[ObjectDB 2.8.2] java.lang.IllegalArgumentException
+Attempt to lock a non entity object [ConcreteFlight:'PLOF026'] (error 635)
+	at javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
+	at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
+	at javax.swing.DefaultButtonModel.setPressed(Unknown Source)
+	at javax.swing.AbstractButton.doClick(Unknown Source)
+	at javax.swing.plaf.basic.BasicMenuItemUI.doClick(Unknown Source)
+	at javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(Unknown Source)
+	at java.awt.Component.processMouseEvent(Unknown Source)
+	at javax.swing.JComponent.processMouseEvent(Unknown Source)
+	at java.awt.Component.processEvent(Unknown Source)
+	at java.awt.Container.processEvent(Unknown Source)
+	at java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+
+[2020-02-16 12:00:32 #7 explorer] 
+[ObjectDB 2.8.2] java.lang.IllegalArgumentException
+Attempt to lock a non entity object [ConcreteFlight:'PLOF025'] (error 635)
+	at javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
+	at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
+	at javax.swing.DefaultButtonModel.setPressed(Unknown Source)
+	at javax.swing.AbstractButton.doClick(Unknown Source)
+	at javax.swing.plaf.basic.BasicMenuItemUI.doClick(Unknown Source)
+	at javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(Unknown Source)
+	at java.awt.Component.processMouseEvent(Unknown Source)
+	at javax.swing.JComponent.processMouseEvent(Unknown Source)
+	at java.awt.Component.processEvent(Unknown Source)
+	at java.awt.Container.processEvent(Unknown Source)
+	at java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+
+[2020-02-16 12:02:22 #8 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is closed by 2700@DESKTOP-00OS7EM
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 12:02:37 #1 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is opened by 12712@DESKTOP-00OS7EM
+
+[2020-02-16 12:02:37 #2 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-16 12:02:37 #3 type] 
+Type domain.Flight is not enhanced.
+
+[2020-02-16 12:02:37 #4 type] 
+Type domain.ConcreteFlight is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 12:02:46 #1 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' has been recovered (tr. 361-380)
+
+[2020-02-16 12:02:46 #2 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is opened by 14760@DESKTOP-00OS7EM
+
+[2020-02-16 12:02:46 #3 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-16 12:06:21 #4 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is closed by 14760@DESKTOP-00OS7EM
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 12:06:23 #1 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is opened by 6768@DESKTOP-00OS7EM
+
+[2020-02-16 12:06:23 #2 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-16 12:06:23 #3 type] 
+Type domain.Flight is not enhanced.
+
+[2020-02-16 12:06:23 #4 type] 
+Type domain.ConcreteFlight is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 12:06:28 #1 explorer] 
+[ObjectDB 2.8.2] javax.persistence.PersistenceException
+Attempt to open a database file 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' that is currently in use by another process (error 141)
+	at com.objectdb.Explorer$1.run(Explorer.java:57)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+Caused by: com.objectdb.o.UserException: Attempt to open a database file 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' that is currently in use by another process
+	at com.objectdb.o.MSG.a(MSG.java:64)
+	at com.objectdb.o.LFL.J(LFL.java:930)
+	at com.objectdb.o.LFL.x(LFL.java:887)
+	at com.objectdb.o.LFL.x(LFL.java:797)
+	at com.objectdb.o.DFL.<init>(DFL.java:241)
+	at com.objectdb.o.DMG.<init>(DMG.java:27)
+	at com.objectdb.o.MST.<init>(MST.java:127)
+	at com.objectdb.o.MST.ap(MST.java:109)
+	at com.objectdb.o.MSF.Y3(MSF.java:190)
+	at com.objectdb.o.OMF.s(OMF.java:804)
+	at com.objectdb.jpa.EMF.s(EMF.java:130)
+	at com.objectdb.o.OMF.x(OMF.java:715)
+	at com.objectdb.jpa.EMF.createEntityManager(EMF.java:149)
+	... 17 more
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 12:06:32 #1 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' has been recovered (tr. 402-420)
+
+[2020-02-16 12:06:32 #2 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is opened by 14320@DESKTOP-00OS7EM
+
+[2020-02-16 12:06:32 #3 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-16 12:10:23 #4 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is closed by 14320@DESKTOP-00OS7EM
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 12:10:26 #1 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is opened by 11916@DESKTOP-00OS7EM
+
+[2020-02-16 12:10:26 #2 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-16 12:10:26 #3 type] 
+Type domain.Flight is not enhanced.
+
+[2020-02-16 12:10:26 #4 type] 
+Type domain.ConcreteFlight is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 12:10:28 #1 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' has been recovered (tr. 443-462)
+
+[2020-02-16 12:10:28 #2 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is opened by 14496@DESKTOP-00OS7EM
+
+[2020-02-16 12:10:28 #3 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 12:12:12 #1 explorer] 
+[ObjectDB 2.8.2] javax.persistence.PersistenceException
+Attempt to open a database file 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' that is currently in use by another process (error 141)
+	at com.objectdb.Explorer$1.run(Explorer.java:57)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+Caused by: com.objectdb.o.UserException: Attempt to open a database file 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' that is currently in use by another process
+	at com.objectdb.o.MSG.a(MSG.java:64)
+	at com.objectdb.o.LFL.J(LFL.java:930)
+	at com.objectdb.o.LFL.x(LFL.java:887)
+	at com.objectdb.o.LFL.x(LFL.java:797)
+	at com.objectdb.o.DFL.<init>(DFL.java:241)
+	at com.objectdb.o.DMG.<init>(DMG.java:27)
+	at com.objectdb.o.MST.<init>(MST.java:127)
+	at com.objectdb.o.MST.ap(MST.java:109)
+	at com.objectdb.o.MSF.Y3(MSF.java:190)
+	at com.objectdb.o.OMF.s(OMF.java:804)
+	at com.objectdb.jpa.EMF.s(EMF.java:130)
+	at com.objectdb.o.OMF.x(OMF.java:715)
+	at com.objectdb.jpa.EMF.createEntityManager(EMF.java:149)
+	... 17 more
+
+[2020-02-16 12:12:14 #4 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is closed by 14496@DESKTOP-00OS7EM
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 12:12:17 #1 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is opened by 13504@DESKTOP-00OS7EM
+
+[2020-02-16 12:12:17 #2 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-16 12:12:17 #3 type] 
+Type domain.Flight is not enhanced.
+
+[2020-02-16 12:12:17 #4 type] 
+Type domain.ConcreteFlight is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 12:12:20 #1 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' has been recovered (tr. 487-506)
+
+[2020-02-16 12:12:20 #2 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is opened by 16188@DESKTOP-00OS7EM
+
+[2020-02-16 12:12:20 #3 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-16 12:19:34 #4 explorer] 
+java.lang.NullPointerException
+	at com.objectdb.o.ARI.R(ARI.java:125)
+	at com.objectdb.o.CNI.n(CNI.java:163)
+	at com.objectdb.o.MultiValueItem.n(MultiValueItem.java:14)
+	at com.objectdb.o.ITP.B(ITP.java:457)
+	at com.objectdb.o.ITP.Yr(ITP.java:341)
+	at com.objectdb.o.RTR.Yr(RTR.java:71)
+	at com.objectdb.o.Command.actionPerformed(Command.java:471)
+	at javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
+	at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
+	at javax.swing.DefaultButtonModel.setPressed(Unknown Source)
+	at javax.swing.AbstractButton.doClick(Unknown Source)
+	at javax.swing.plaf.basic.BasicMenuItemUI.doClick(Unknown Source)
+	at javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(Unknown Source)
+	at java.awt.Component.processMouseEvent(Unknown Source)
+	at javax.swing.JComponent.processMouseEvent(Unknown Source)
+	at java.awt.Component.processEvent(Unknown Source)
+	at java.awt.Container.processEvent(Unknown Source)
+	at java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+
+[2020-02-16 12:19:56 #5 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is closed by 16188@DESKTOP-00OS7EM
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 12:20:00 #1 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is opened by 9696@DESKTOP-00OS7EM
+
+[2020-02-16 12:20:00 #2 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-16 12:20:00 #3 type] 
+Type domain.Flight is not enhanced.
+
+[2020-02-16 12:20:00 #4 type] 
+Type domain.ConcreteFlight is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 12:20:03 #1 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' has been recovered (tr. 529-531)
+
+[2020-02-16 12:20:03 #2 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is opened by 2964@DESKTOP-00OS7EM
+
+[2020-02-16 12:20:03 #3 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-16 12:26:25 #4 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is closed by 2964@DESKTOP-00OS7EM
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 12:26:27 #1 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is opened by 8032@DESKTOP-00OS7EM
+
+[2020-02-16 12:26:27 #2 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-16 12:26:27 #3 type] 
+Type domain.Flight is not enhanced.
+
+[2020-02-16 12:26:27 #4 type] 
+Type domain.ConcreteFlight is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 12:26:31 #1 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' has been recovered (tr. 535-554)
+
+[2020-02-16 12:26:31 #2 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is opened by 10420@DESKTOP-00OS7EM
+
+[2020-02-16 12:26:31 #3 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-16 12:43:28 #4 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is closed by 10420@DESKTOP-00OS7EM
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 12:43:31 #1 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is opened by 13200@DESKTOP-00OS7EM
+
+[2020-02-16 12:43:31 #2 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-16 12:43:49 #3 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is closed by 13200@DESKTOP-00OS7EM
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 12:43:52 #1 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is opened by 11784@DESKTOP-00OS7EM
+
+[2020-02-16 12:43:52 #2 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-16 12:43:52 #3 type] 
+Type domain.Flight is not enhanced.
+
+[2020-02-16 12:43:52 #4 type] 
+Type domain.ConcreteFlight is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 12:43:57 #1 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' has been recovered (tr. 576-595)
+
+[2020-02-16 12:43:57 #2 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is opened by 12924@DESKTOP-00OS7EM
+
+[2020-02-16 12:43:57 #3 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-16 12:45:31 #4 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is closed by 12924@DESKTOP-00OS7EM
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 12:45:34 #1 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is opened by 16012@DESKTOP-00OS7EM
+
+[2020-02-16 12:45:34 #2 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-16 12:45:34 #3 type] 
+Type domain.Flight is not enhanced.
+
+[2020-02-16 12:45:34 #4 type] 
+Type domain.ConcreteFlight is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 12:45:41 #1 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' has been recovered (tr. 618-636)
+
+[2020-02-16 12:45:41 #2 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is opened by 14108@DESKTOP-00OS7EM
+
+[2020-02-16 12:45:41 #3 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-16 12:49:59 #4 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is closed by 14108@DESKTOP-00OS7EM
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 12:50:03 #1 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is opened by 5508@DESKTOP-00OS7EM
+
+[2020-02-16 12:50:03 #2 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-16 12:50:28 #3 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is closed by 5508@DESKTOP-00OS7EM
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 12:50:29 #1 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is opened by 1840@DESKTOP-00OS7EM
+
+[2020-02-16 12:50:29 #2 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-16 12:50:42 #3 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is closed by 1840@DESKTOP-00OS7EM
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 12:50:44 #1 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is opened by 10700@DESKTOP-00OS7EM
+
+[2020-02-16 12:50:44 #2 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-16 12:50:44 #3 type] 
+Type domain.Flight is not enhanced.
+
+[2020-02-16 12:50:44 #4 type] 
+Type domain.ConcreteFlight is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 12:50:49 #1 explorer] 
+[ObjectDB 2.8.2] javax.persistence.PersistenceException
+Attempt to open a database file 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' that is currently in use by another process (error 141)
+	at com.objectdb.Explorer$1.run(Explorer.java:57)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+Caused by: com.objectdb.o.UserException: Attempt to open a database file 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' that is currently in use by another process
+	at com.objectdb.o.MSG.a(MSG.java:64)
+	at com.objectdb.o.LFL.J(LFL.java:930)
+	at com.objectdb.o.LFL.x(LFL.java:887)
+	at com.objectdb.o.LFL.x(LFL.java:797)
+	at com.objectdb.o.DFL.<init>(DFL.java:241)
+	at com.objectdb.o.DMG.<init>(DMG.java:27)
+	at com.objectdb.o.MST.<init>(MST.java:127)
+	at com.objectdb.o.MST.ap(MST.java:109)
+	at com.objectdb.o.MSF.Y3(MSF.java:190)
+	at com.objectdb.o.OMF.s(OMF.java:804)
+	at com.objectdb.jpa.EMF.s(EMF.java:130)
+	at com.objectdb.o.OMF.x(OMF.java:715)
+	at com.objectdb.jpa.EMF.createEntityManager(EMF.java:149)
+	... 17 more
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 12:50:54 #1 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' has been recovered (tr. 660-678)
+
+[2020-02-16 12:50:54 #2 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is opened by 9536@DESKTOP-00OS7EM
+
+[2020-02-16 12:50:54 #3 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-16 12:52:02 #4 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is closed by 9536@DESKTOP-00OS7EM
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 13:00:58 #1 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is opened by 8676@DESKTOP-00OS7EM
+
+[2020-02-16 13:00:58 #2 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-16 13:01:40 #3 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is closed by 8676@DESKTOP-00OS7EM
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 13:01:42 #1 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is opened by 15620@DESKTOP-00OS7EM
+
+[2020-02-16 13:01:42 #2 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-16 13:01:42 #3 type] 
+Type domain.Flight is not enhanced.
+
+[2020-02-16 13:01:42 #4 type] 
+Type domain.ConcreteFlight is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 13:01:46 #1 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' has been recovered (tr. 700-719)
+
+[2020-02-16 13:01:46 #2 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is opened by 7684@DESKTOP-00OS7EM
+
+[2020-02-16 13:01:46 #3 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-16 13:05:00 #4 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is closed by 7684@DESKTOP-00OS7EM
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 13:33:28 #1 server] 
+Server on port 6136 has started by 9732@DESKTOP-00OS7EM
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 13:33:34 #1 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is opened by 13988@DESKTOP-00OS7EM
+
+[2020-02-16 13:33:34 #2 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-16 13:34:07 #3 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is closed by 13988@DESKTOP-00OS7EM
+
+[2020-02-16 13:34:07 #4 store] 
+Database 'C:\Users\Usuario\Desktop\objectdb-2.8.2\db\point.odb' is opened by 13988@DESKTOP-00OS7EM
+
+[2020-02-16 13:34:07 #5 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-16 13:34:20 #6 store] 
+Database 'C:\Users\Usuario\Desktop\objectdb-2.8.2\db\point.odb' is closed by 13988@DESKTOP-00OS7EM
+
+[2020-02-16 13:34:20 #7 store] 
+Database 'C:\Users\Usuario\Desktop\objectdb-2.8.2\db\world.odb' is opened by 13988@DESKTOP-00OS7EM
+
+[2020-02-16 13:34:20 #8 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-16 13:49:41 #9 store] 
+Database 'C:\Users\Usuario\Desktop\objectdb-2.8.2\db\world.odb' is closed by 13988@DESKTOP-00OS7EM
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 13:49:44 #1 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is opened by 8932@DESKTOP-00OS7EM
+
+[2020-02-16 13:49:44 #2 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-16 13:49:44 #3 type] 
+Type domain.Flight is not enhanced.
+
+[2020-02-16 13:49:44 #4 type] 
+Type domain.ConcreteFlight is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 13:49:54 #1 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' has been recovered (tr. 742-761)
+
+[2020-02-16 13:49:54 #2 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is opened by 6032@DESKTOP-00OS7EM
+
+[2020-02-16 13:49:54 #3 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-16 13:50:56 #4 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is closed by 6032@DESKTOP-00OS7EM
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 13:50:58 #1 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is opened by 7024@DESKTOP-00OS7EM
+
+[2020-02-16 13:50:58 #2 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-16 13:50:58 #3 type] 
+Type domain.Flight is not enhanced.
+
+[2020-02-16 13:50:58 #4 type] 
+Type domain.ConcreteFlight is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 13:58:17 #1 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is opened by 11728@DESKTOP-00OS7EM
+
+[2020-02-16 13:58:17 #2 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-16 13:58:17 #3 type] 
+Type domain.Flight is not enhanced.
+
+[2020-02-16 13:58:17 #4 type] 
+Type domain.ConcreteFlight is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 14:04:24 #1 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' has been recovered (tr. 764-764)
+
+[2020-02-16 14:04:24 #2 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is opened by 7244@DESKTOP-00OS7EM
+
+[2020-02-16 14:04:24 #3 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-16 14:04:24 #4 type] 
+Type domain.Flight is not enhanced.
+
+[2020-02-16 14:04:24 #5 type] 
+Type domain.ConcreteFlight is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 14:44:06 #1 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' has been recovered (tr. 765-765)
+
+[2020-02-16 14:44:06 #2 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is opened by 16172@DESKTOP-00OS7EM
+
+[2020-02-16 14:44:06 #3 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-16 14:44:12 #4 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is closed by 16172@DESKTOP-00OS7EM
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 14:44:18 #1 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is opened by 12852@DESKTOP-00OS7EM
+
+[2020-02-16 14:44:18 #2 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 14:44:23 #1 explorer] 
+[ObjectDB 2.8.2] javax.persistence.PersistenceException
+Attempt to open a database file 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' that is currently in use by another process (error 141)
+	at com.objectdb.Explorer$1.run(Explorer.java:57)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+Caused by: com.objectdb.o.UserException: Attempt to open a database file 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' that is currently in use by another process
+	at com.objectdb.o.MSG.a(MSG.java:64)
+	at com.objectdb.o.LFL.J(LFL.java:930)
+	at com.objectdb.o.LFL.x(LFL.java:887)
+	at com.objectdb.o.LFL.x(LFL.java:797)
+	at com.objectdb.o.DFL.<init>(DFL.java:241)
+	at com.objectdb.o.DMG.<init>(DMG.java:27)
+	at com.objectdb.o.MST.<init>(MST.java:127)
+	at com.objectdb.o.MST.ap(MST.java:109)
+	at com.objectdb.o.MSF.Y3(MSF.java:190)
+	at com.objectdb.o.OMF.s(OMF.java:804)
+	at com.objectdb.jpa.EMF.s(EMF.java:130)
+	at com.objectdb.o.OMF.x(OMF.java:715)
+	at com.objectdb.jpa.EMF.createEntityManager(EMF.java:149)
+	... 17 more
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 14:44:26 #1 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' has been recovered (tr. 1-2)
+
+[2020-02-16 14:44:26 #2 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is opened by 12748@DESKTOP-00OS7EM
+
+[2020-02-16 14:44:26 #3 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-16 14:44:47 #4 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is closed by 12748@DESKTOP-00OS7EM
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-16 14:44:49 #1 store] 
+Database 'C:\Users\Usuario\Desktop\SE\BUM2_JulenUr\db\Flights.odb' is opened by 5560@DESKTOP-00OS7EM
+
+[2020-02-16 14:44:49 #2 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-16 14:44:49 #3 type] 
+Type domain.Flight is not enhanced.
+
+[2020-02-16 14:44:49 #4 type] 
+Type domain.ConcreteFlight is not enhanced.
+

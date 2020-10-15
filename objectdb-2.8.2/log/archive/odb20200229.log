@@ -1,0 +1,202 @@
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-29 01:39:07 #1 store] 
+Database 'C:\Users\Usuario\git\Aeroplof\BUM3_JulenUr\db\Flights.odb' is opened by 13904@DESKTOP-00OS7EM
+
+[2020-02-29 01:39:07 #2 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-29 01:39:07 #3 type] 
+Type domain.Flight is not enhanced.
+
+[2020-02-29 01:39:07 #4 type] 
+Type domain.ConcreteFlight is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-29 14:23:03 #1 store] 
+Database 'C:\Users\Usuario\git\Sprint_1\Bets\resources\bets.temp' is opened by 15972@DESKTOP-00OS7EM
+
+[2020-02-29 14:23:03 #2 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-29 14:43:47 #3 store] 
+Database 'C:\Users\Usuario\git\Sprint_1\Bets\resources\bets.temp' is closed by 15972@DESKTOP-00OS7EM
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-29 14:54:49 #1 store] 
+Database 'C:\Users\Usuario\git\Sprint_1\Bets\resources\bets.temp' is opened by 23096@DESKTOP-00OS7EM
+
+[2020-02-29 14:54:49 #2 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-29 14:56:38 #3 store] 
+Database 'C:\Users\Usuario\git\Sprint_1\Bets\resources\bets.temp' is closed by 23096@DESKTOP-00OS7EM
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-29 15:09:23 #1 store] 
+Database 'C:\Users\Usuario\git\Sprint_1\Bets\resources\bets.temp' is opened by 1848@DESKTOP-00OS7EM
+
+[2020-02-29 15:09:23 #2 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-29 15:10:27 #3 store] 
+Database 'C:\Users\Usuario\git\Sprint_1\Bets\resources\bets.temp' is closed by 1848@DESKTOP-00OS7EM
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-29 18:29:23 #1 store] 
+Database 'C:\Users\Usuario\git\Aeroplof\BUM3_JulenUr\db\Flights.odb' is opened by 22040@DESKTOP-00OS7EM
+
+[2020-02-29 18:29:23 #2 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-29 18:29:23 #3 type] 
+Type domain.Flight is not enhanced.
+
+[2020-02-29 18:29:23 #4 type] 
+Type domain.ConcreteFlight is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-29 18:30:08 #1 store] 
+Database 'C:\Users\Usuario\git\Aeroplof\Aeroplof\db\Flights.odb' is opened by 4040@DESKTOP-00OS7EM
+
+[2020-02-29 18:30:08 #2 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-29 18:30:08 #3 type] 
+Type domain.Flight is not enhanced.
+
+[2020-02-29 18:30:08 #4 type] 
+Type domain.ConcreteFlight is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-29 19:48:35 #1 store] 
+Database 'C:\Users\Usuario\git\Sprint_1\Bets\resources\bets.temp' is opened by 9824@DESKTOP-00OS7EM
+
+[2020-02-29 19:48:35 #2 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-29 19:49:13 #3 store] 
+Database 'C:\Users\Usuario\git\Sprint_1\Bets\resources\bets.temp' is closed by 9824@DESKTOP-00OS7EM
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-29 19:57:23 #1 store] 
+Database 'C:\Users\Usuario\git\Sprint_1\Bets\resources\bets.temp' is opened by 10644@DESKTOP-00OS7EM
+
+[2020-02-29 19:57:23 #2 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-29 19:57:36 #3 store] 
+Database 'C:\Users\Usuario\git\Sprint_1\Bets\resources\bets.temp' is closed by 10644@DESKTOP-00OS7EM
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-29 20:36:54 #1 store] 
+Database 'C:\Users\Usuario\git\Sprint_1\Bets\resources\bets.temp' is opened by 23432@DESKTOP-00OS7EM
+
+[2020-02-29 20:36:54 #2 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-29 20:37:21 #3 store] 
+Database 'C:\Users\Usuario\git\Sprint_1\Bets\resources\bets.temp' is closed by 23432@DESKTOP-00OS7EM
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-29 20:42:00 #1 explorer] 
+[ObjectDB 2.8.2] javax.persistence.PersistenceException
+Attempt to open a database file 'C:\Users\Usuario\git\Sprint_1\Bets\resources\bets.temp' that is currently in use by another process (error 141)
+	at com.objectdb.Explorer$1.run(Explorer.java:57)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+Caused by: com.objectdb.o.UserException: Attempt to open a database file 'C:\Users\Usuario\git\Sprint_1\Bets\resources\bets.temp' that is currently in use by another process
+	at com.objectdb.o.MSG.a(MSG.java:64)
+	at com.objectdb.o.LFL.J(LFL.java:930)
+	at com.objectdb.o.LFL.x(LFL.java:887)
+	at com.objectdb.o.LFL.x(LFL.java:797)
+	at com.objectdb.o.DFL.<init>(DFL.java:241)
+	at com.objectdb.o.DMG.<init>(DMG.java:27)
+	at com.objectdb.o.MST.<init>(MST.java:127)
+	at com.objectdb.o.MST.ap(MST.java:109)
+	at com.objectdb.o.MSF.Y3(MSF.java:190)
+	at com.objectdb.o.OMF.s(OMF.java:804)
+	at com.objectdb.jpa.EMF.s(EMF.java:130)
+	at com.objectdb.o.OMF.x(OMF.java:715)
+	at com.objectdb.jpa.EMF.createEntityManager(EMF.java:149)
+	... 17 more
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-29 20:43:31 #1 store] 
+Database 'C:\Users\Usuario\git\Sprint_1\Bets\resources\bets.temp' is opened by 14740@DESKTOP-00OS7EM
+
+[2020-02-29 20:43:31 #2 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-29 20:44:14 #3 store] 
+Database 'C:\Users\Usuario\git\Sprint_1\Bets\resources\bets.temp' is closed by 14740@DESKTOP-00OS7EM
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-29 20:45:15 #1 store] 
+Database 'C:\Users\Usuario\git\Sprint_1\Bets\resources\bets.temp' is opened by 13524@DESKTOP-00OS7EM
+
+[2020-02-29 20:45:15 #2 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-29 20:45:20 #3 store] 
+Database 'C:\Users\Usuario\git\Sprint_1\Bets\resources\bets.temp' is closed by 13524@DESKTOP-00OS7EM
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-29 20:45:28 #1 store] 
+Database 'C:\Users\Usuario\git\Sprint_1\Bets\resources\bets.temp' is opened by 8704@DESKTOP-00OS7EM
+
+[2020-02-29 20:45:28 #2 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-29 20:45:39 #3 store] 
+Database 'C:\Users\Usuario\git\Sprint_1\Bets\resources\bets.temp' is closed by 8704@DESKTOP-00OS7EM
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-29 20:51:35 #1 store] 
+Database 'C:\Users\Usuario\git\Sprint_1\Bets\resources\bets.temp' is opened by 16444@DESKTOP-00OS7EM
+
+[2020-02-29 20:51:35 #2 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-29 20:52:22 #3 store] 
+Database 'C:\Users\Usuario\git\Sprint_1\Bets\resources\bets.temp' is closed by 16444@DESKTOP-00OS7EM
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-29 22:56:16 #1 store] 
+Database 'C:\Users\Usuario\git\Aeroplof\BUM3_JulenUr\db\Flights.odb' is opened by 14412@DESKTOP-00OS7EM
+
+[2020-02-29 22:56:16 #2 store] 
+Configuration path: C:\Users\Usuario\Desktop\objectdb-2.8.2\objectdb.conf
+
+[2020-02-29 22:56:16 #3 type] 
+Type domain.Flight is not enhanced.
+
+[2020-02-29 22:56:16 #4 type] 
+Type domain.ConcreteFlight is not enhanced.
+

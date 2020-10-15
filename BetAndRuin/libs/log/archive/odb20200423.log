@@ -1,0 +1,32 @@
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-04-23 13:51:08 #1 store] 
+Database 'C:\Users\Usuario\git\BetAndRuin\BetAndRuin\resources\bets.temp' is opened by 13920@DESKTOP-00OS7EM
+
+[2020-04-23 13:51:08 #2 store] 
+Configuration path: ?
+
+[2020-04-23 13:51:08 #3 type] 
+Type domain.Event is not enhanced.
+
+[2020-04-23 13:51:08 #4 type] 
+Type domain.Question is not enhanced.
+
+[2020-04-23 13:51:08 #5 type] 
+Type domain.Competition is not enhanced.
+
+[2020-04-23 13:51:08 #6 type] 
+Type domain.Prediction is not enhanced.
+
+[2020-04-23 13:51:08 #7 type] 
+Type domain.User is not enhanced.
+
+[2020-04-23 13:51:08 #8 type] 
+Type domain.CreditCard is not enhanced.
+
+[2020-04-23 13:51:08 #9 type] 
+Type domain.Bet is not enhanced.
+
+[2020-04-23 13:51:08 #10 type] 
+Type domain.Profile is not enhanced.
+
