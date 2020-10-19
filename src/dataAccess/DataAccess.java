@@ -320,4 +320,8 @@ public interface DataAccess {
 	 * @param date
 	 */
 	public void createCompetition(String count, Sport sport, String comp, Date date);
+	
+	public void open(boolean initializedMode);
+	
+	public void close();
 }

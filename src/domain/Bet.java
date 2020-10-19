@@ -1,6 +1,7 @@
 package domain;
 
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
@@ -10,6 +11,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Queue;
 import java.util.Set;
+import java.util.Vector;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -21,6 +23,8 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlID;
 import javax.xml.bind.annotation.XmlIDREF;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+
+
 
 
 @SuppressWarnings("serial")
@@ -394,6 +398,30 @@ public class Bet implements Serializable{
 			}	
 		}
 		return winnings;
+	}
+
+	public void addBetToTable(gui.Panels.subpanels.BettingHistoryPanel.NonEditableTableModel betTableModel) {
+		SimpleDateFormat df = new SimpleDateFormat("HH:mm dd/MM/yyyy");
+		Vector<Object> row = new Vector<Object>();
+		row.add(getType().name());
+		row.add(getStake());
+		row.add(df.format(getPlacementdate()));
+		if (getStatus().equals(Bet.BetStatus.RESOLVED)) {
+			List<Prediction> pred = getPredictions();
+			int won = 0;
+			for (Prediction p : pred) {
+				if (p.getOutcome() != null && p.getOutcome()) {
+					won++;
+				}
+			}
+			row.add(won + "/" + pred.size());
+			row.add(getWinnings());
+		} else {
+			row.add(df.format(getResolvingdate()));
+			row.add(getStatus());
+		}
+		row.add(this);
+		betTableModel.addRow(row);
 	}
 
 	

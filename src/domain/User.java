@@ -33,11 +33,10 @@ import configuration.Password;
 public class User implements Serializable{
 
 
+	private UserProduct userProduct = new UserProduct();
 	@Id
 	@XmlID
 	private String username;
-	private String password;
-	private boolean isAdmin;
 	private float cash;
 
 	@OneToOne(cascade = CascadeType.ALL,mappedBy = "owner", orphanRemoval = true)
@@ -65,9 +64,9 @@ public class User implements Serializable{
 	public User(String username, String password, boolean isAdmin, Profile p) {
 		super();
 		this.username = username;
-		this.password = Password.hashPassword(password);
+		userProduct.setPassword(Password.hashPassword(password));
 		this.profile = p;
-		this.isAdmin = isAdmin;
+		userProduct.setIsAdmin(isAdmin);
 		this.registrationdate = new Date();
 		this.cash = 9999; 
 		this.bets = new ArrayList<Bet>();
@@ -84,11 +83,11 @@ public class User implements Serializable{
 	}
 
 	public String getPassword() {
-		return password;
+		return userProduct.getPassword();
 	}
 
 	public void setPassword(String password) {
-		this.password = password;
+		userProduct.setPassword(password);
 	}
 
 	public Profile getProfile() {
@@ -123,11 +122,11 @@ public class User implements Serializable{
 
 
 	public boolean isAdmin() {
-		return isAdmin;
+		return userProduct.getIsAdmin();
 	}
 
 	public void setAdmin(boolean isAdmin) {
-		this.isAdmin = isAdmin;
+		userProduct.setIsAdmin(isAdmin);
 	}
 
 	public void setLastlogin(Date lastlogin) {
@@ -192,12 +191,7 @@ public class User implements Serializable{
 	}
 
 	public String statusToString() {
-		if(this.isAdmin) {
-			return("Admin.");
-		}
-		else {
-			return("User");
-		}
+		return userProduct.statusToString();
 	}
 
 

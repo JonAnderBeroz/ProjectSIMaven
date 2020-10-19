@@ -289,33 +289,6 @@ public class BettingHistoryPanel extends JPanel {
 		predictionTable.setRowSorter(sorter);
 	}
 
-	public void addBetToTable(Bet bet) {
-		SimpleDateFormat df = new SimpleDateFormat("HH:mm dd/MM/yyyy");
-		Vector<Object> row = new Vector<Object>();
-
-		row.add(bet.getType().name());
-		row.add(bet.getStake());
-		row.add(df.format(bet.getPlacementdate()));
-		if(bet.getStatus().equals(Bet.BetStatus.RESOLVED)) {
-			List<Prediction> pred = bet.getPredictions();
-			int won = 0;
-			for(Prediction p : pred) {
-				if(p.getOutcome()!=null && p.getOutcome()) {
-					won++;
-				}
-			}
-			row.add(won + "/" + pred.size());
-			row.add(bet.getWinnings());
-		}
-		else {
-			row.add(df.format(bet.getResolvingdate()));
-			row.add(bet.getStatus());
-		}
-		row.add(bet);
-		betTableModel.addRow(row);		
-
-	}
-
 	public void addPredictionToTable(Prediction p) {
 		SimpleDateFormat df = new SimpleDateFormat("HH:mm dd/MM/yyyy");
 		Vector<Object> row = new Vector<Object>();
@@ -426,7 +399,7 @@ public class BettingHistoryPanel extends JPanel {
 		int index = (pageNumber-1)*PAGESIZE;
 		int remainingelements = searchResult.size() - index;
 		while((elementsOnPage < PAGESIZE) && (elementsOnPage < remainingelements)) {
-			addBetToTable(searchResult.get(index+elementsOnPage));
+			searchResult.get(index + elementsOnPage).addBetToTable(betTableModel);
 			elementsOnPage++;
 		}
 

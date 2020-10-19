@@ -101,8 +101,6 @@ public class CreateEventPanel extends JPanel {
 	private final JScrollPane competitionScrollPane = new JScrollPane();
 
 	private BLFacade facade = MainGUI.getBusinessLogic();
-
-	private Color color = new Color(196,196,196);
 	/**
 	 * Create the panel.
 	 */

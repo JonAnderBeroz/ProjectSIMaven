@@ -1,7 +1,6 @@
 package dataAccess;
 
 import java.io.File;
-import java.security.SecureRandom;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -48,32 +47,17 @@ import exceptions.invalidPW;
  * It implements the data access to the objectDb database
  */
 public class DataAccessImplementation implements DataAccess {
-	
-	protected static EntityManagerFactory emf;
-	private Random rand = new Random();
-	private String fileName;
-	ConfigXML c;
-	
-	public DataAccessImplementation(boolean initializeMode)  {
 
-		c=ConfigXML.getInstance();
+	protected static EntityManagerFactory emf;
+	protected static EntityManager  db;
+	private Random rand = new Random();;
+	ConfigXML c = ConfigXML.getInstance();
+
+	public DataAccessImplementation(boolean initializeMode)  {
 
 		System.out.println("Creating DataAccess instance => isDatabaseLocal: "+c.isDatabaseLocal()+" getDatabBaseOpenMode: "+c.getDataBaseOpenMode());
 
-		fileName=c.getDbFilename();
-		if (initializeMode) {
-			fileName=fileName+";drop";
-		}
-
-		if (c.isDatabaseLocal()) {
-			emf = Persistence.createEntityManagerFactory("objectdb:"+fileName);
-		} else {
-			Map<String, String> properties = new HashMap<String, String>();
-			properties.put("javax.persistence.jdbc.user", c.getUser());
-			properties.put("javax.persistence.jdbc.password", c.getPassword());
-
-			emf = Persistence.createEntityManagerFactory("objectdb://"+c.getDatabaseNode()+":"+c.getDatabasePort()+"/"+fileName, properties);
-		}
+		open(initializeMode);
 	}
 
 	public DataAccessImplementation()  {	
@@ -81,10 +65,10 @@ public class DataAccessImplementation implements DataAccess {
 	}
 
 	public EntityManager createEntityManager() {
-        if (emf == null) {
-            throw new IllegalStateException("Entity manager factory is not initialized yet.");
-        }
-        return emf.createEntityManager();
+		if (emf == null) {
+			throw new IllegalStateException("Entity manager factory is not initialized yet.");
+		}
+		return emf.createEntityManager();
 	}
 
 	/**
@@ -92,7 +76,6 @@ public class DataAccessImplementation implements DataAccess {
 	 * This method is invoked by the business logic (constructor of BLFacadeImplementation) when the option "initialize" is declared in the tag dataBaseOpenMode of resources/config.xml file
 	 */	
 	public void initializeDB(){
-		EntityManager db = createEntityManager();
 		db.getTransaction().begin();
 		try {
 			Calendar today = Calendar.getInstance();
@@ -141,15 +124,15 @@ public class DataAccessImplementation implements DataAccess {
 			Event ev30=new Event(30, "Golden State Warrions-Chicago Bulls", df.parse("15:00 25/5/2020"),df.parse("16:45 25/5/2020"),Sport.BASKETBALL);
 			Event ev31=new Event(31, "New York Knicks-Milwakee Bucks", df.parse("18:00 25/5/2020"),df.parse("19:45 25/5/2020"),Sport.BASKETBALL);
 			Event ev32=new Event(32, "Cleveland Cavaliers-Dallas Mavericks", df.parse("14:00 20/4/2020"),df.parse("15:45 20/4/2020"),Sport.BASKETBALL);
-			
+
 			Event ev33=new Event(33, "Saski Baskonia-Unicaja Baloncesto",df.parse("12:00 25/5/2020"),df.parse("13:45 25/5/2020"),Sport.BASKETBALL);
 			Event ev34=new Event(34, "Real Madrid Baloncesto-Basket Zaragoza",  df.parse("15:30 26/5/2020"),df.parse("17:15 26/5/2020"),Sport.BASKETBALL);
 			Event ev35=new Event(35, "Valencia Basket-FC Barcelona Baloncesto", df.parse("18:00 25/5/2020"),df.parse("19:45 25/5/2020"),Sport.BASKETBALL);
 			Event ev36=new Event(36, "Baloncesto Estudiantes-Joventut Badalona", df.parse("15:00 25/5/2020"),df.parse("16:45 25/5/2020"),Sport.BASKETBALL);
 			Event ev37=new Event(37, "Club Baloncesto Murcia-Bàsquet Manresa", df.parse("18:00 25/5/2020"),df.parse("19:45 25/5/2020"),Sport.BASKETBALL);
-		
-			
-			
+
+
+
 
 			Competition liga = new Competition("LaLiga Santander", Country.ES, Sport.FOOTBALL, new Date(), new Date());
 			Competition bundesliga = new Competition("Bundesliga", Country.DE, Sport.FOOTBALL, new Date(), new Date());
@@ -162,11 +145,11 @@ public class DataAccessImplementation implements DataAccess {
 			Competition frenchopen = new Competition("Roland Garros", Country.FR, Sport.TENNIS, new Date(), new Date());
 			Competition wimbledon = new Competition("Wimbledon", Country.GB, Sport.TENNIS, new Date(), new Date());
 			Competition usopen = new Competition("US Open", Country.US, Sport.TENNIS, new Date(), new Date());
-			
-///////////////////// TEST ////////////////////////
-			
+
+			///////////////////// TEST ////////////////////////
+
 			Event test = new Event(50, "test1-test2",  df.parse("11:00 13/5/2020"),df.parse("17:26 13/5/2020"),Sport.FOOTBALL);
- 
+
 			Question testq = test.addQuestion("???", 4);
 			testq.addPrediction("yes", Float.valueOf((float) 1.7));
 			testq.addPrediction("no", Float.valueOf((float) 1.3));
@@ -175,9 +158,9 @@ public class DataAccessImplementation implements DataAccess {
 			testqq.addPrediction("no", Float.valueOf((float) 1.3));
 			db.persist(test);
 			liga.addEvent(test);
-			
+
 			Event test1 = new Event(51, "test3-test4",  df.parse("11:00 13/5/2020"),df.parse("16:26 13/5/2020"),Sport.FOOTBALL);
-			 
+
 			Question testq1 = test1.addQuestion("???", 4);
 			testq1.addPrediction("yes", Float.valueOf((float) 1.7));
 			testq1.addPrediction("no", Float.valueOf((float) 1.3));
@@ -186,56 +169,56 @@ public class DataAccessImplementation implements DataAccess {
 			testqq1.addPrediction("no", Float.valueOf((float) 1.3));
 			db.persist(test1);
 			liga.addEvent(test1);
-			
+
 			Event test2 = new Event(52, "test5-test6",  df.parse("11:00 13/5/2020"),df.parse("16:26 13/5/2020"),Sport.FOOTBALL);
-			 
+
 			Question testq2 = test2.addQuestion("???", 4);
 			testq2.addPrediction("yes", Float.valueOf((float) 1.7));
 			testq2.addPrediction("no", Float.valueOf((float) 1.3));
 			db.persist(test2);
 			liga.addEvent(test2);
-			
+
 			Event test3 = new Event(53, "test7-test8",  df.parse("11:00 13/5/2020"),df.parse("16:58 13/5/2020"),Sport.FOOTBALL);
-			 
+
 			Question testq3 = test3.addQuestion("???", 4);
 			testq3.addPrediction("yes", Float.valueOf((float) 1.7));
 			testq3.addPrediction("no", Float.valueOf((float) 1.3));
 			db.persist(test3);
 			liga.addEvent(test3);
-			
+
 			Event test4 = new Event(54, "test1-test2",  df.parse("11:00 18/4/2020"),df.parse("15:41 18/4/2020"),Sport.FOOTBALL);
-			 
+
 			Question testq4 = test4.addQuestion("???", 4);
 			testq4.addPrediction("yes", Float.valueOf((float) 1.7));
 			testq4.addPrediction("no", Float.valueOf((float) 1.3));
 			db.persist(test4);
 			liga.addEvent(test4);
-			
+
 			Event test5 = new Event(55, "test3-test4",  df.parse("11:00 18/4/2020"),df.parse("15:35 18/4/2020"),Sport.FOOTBALL);
-			 
+
 			Question testq5 = test5.addQuestion("???", 4);
 			testq5.addPrediction("yes", Float.valueOf((float) 1.7));
 			testq5.addPrediction("no", Float.valueOf((float) 1.3));
 			db.persist(test5);
 			liga.addEvent(test5);
-			
+
 			Event test6 = new Event(56, "test5-test6",  df.parse("11:00 18/4/2020"),df.parse("15:35 18/4/2020"),Sport.FOOTBALL);
-			 
+
 			Question testq6 = test6.addQuestion("???", 4);
 			testq6.addPrediction("yes", Float.valueOf((float) 1.7));
 			testq6.addPrediction("no", Float.valueOf((float) 1.3));
 			db.persist(test6);
 			liga.addEvent(test6);
-			
+
 			Event test7 = new Event(57, "test7-test8",  df.parse("11:00 18/4/2020"),df.parse("15:35  18/4/2020"),Sport.FOOTBALL);
-			 
+
 			Question testq7 = test7.addQuestion("???", 4);
 			testq7.addPrediction("yes", Float.valueOf((float) 1.7));
 			testq7.addPrediction("no", Float.valueOf((float) 1.3));
 			db.persist(test7);
 			liga.addEvent(test7);
-			
-//////////////////////////////////////////////////////////////////////
+
+			//////////////////////////////////////////////////////////////////////
 			liga.addEvent(ev1);
 			liga.addEvent(ev2);
 			liga.addEvent(ev3); 
@@ -273,7 +256,7 @@ public class DataAccessImplementation implements DataAccess {
 			endesa.addEvent(ev35);
 			endesa.addEvent(ev36);
 			endesa.addEvent(ev37);
-			
+
 			Question q1;
 			Question q2;
 			Question q3;
@@ -418,14 +401,14 @@ public class DataAccessImplementation implements DataAccess {
 			Calendar cal = Calendar.getInstance();
 			cal.set(Calendar.YEAR, 2020);
 			cal.set(Calendar.MONTH, 8);
-					
+
 			CreditCard card1 = new CreditCard("5412753456789010", cal.getTime());
 			CreditCard card2 = new CreditCard("5412753456789011", cal.getTime());
-			
+
 			u1.addCreditCard(card1);
 			u1.addCreditCard(card2);
 			u1.setDefaultCreditCard(card1);
-			
+
 			db.persist(u1);
 			db.persist(u2);
 			db.persist(u3);
@@ -492,9 +475,8 @@ public class DataAccessImplementation implements DataAccess {
 			db.persist(ev20);			
 			db.persist(ev21);
 			db.persist(ev27);
-			
+
 			db.getTransaction().commit();
-			db.close();
 			System.out.println("Db initialized");
 		}
 		catch (Exception e){
@@ -520,13 +502,13 @@ public class DataAccessImplementation implements DataAccess {
 		if (ev.DoesQuestionExists(question)) {
 			db.close();
 			throw new QuestionAlreadyExist(ResourceBundle.getBundle("Etiquetas").getString("ErrorQueryAlreadyExist"));
-	    }
-		
+		}
+
 		db.getTransaction().begin();
 
 		Question q = ev.addQuestion(question, betMinimum, predictions);
 		db.persist(ev); // db.persist(q) not required when CascadeType.PERSIST is added in questions property of Event class
-		
+
 		db.getTransaction().commit();
 		db.close();
 		return q;
@@ -627,19 +609,19 @@ public class DataAccessImplementation implements DataAccess {
 		EntityManager db = createEntityManager();
 		System.out.println(">> DataAccess: getEventsMonth");
 		Vector<Date> res = new Vector<Date>();	
-		
+
 		Date firstDayMonthDate= null;
 		Date lastDayMonthDate=  null;
-		
+
 		Date today = new Date();
 		Calendar cld = Calendar.getInstance();
 		cld.setTime(today);
 		int thismonth = cld.get(Calendar.MONTH);
 		cld.setTime(date);
 		int datemonth = cld.get(Calendar.MONTH);
-		
+
 		System.out.println("getEventsMonth month: " + 1);
-		
+
 		if(today.compareTo(date) > 0) { 
 			db.close();
 			return res;
@@ -679,7 +661,7 @@ public class DataAccessImplementation implements DataAccess {
 
 		Date firstDayMonthDate= null;
 		Date lastDayMonthDate=  null;
-		
+
 		Date today = new Date();
 		Calendar cld = Calendar.getInstance();
 		cld.setTime(today);
@@ -688,7 +670,7 @@ public class DataAccessImplementation implements DataAccess {
 		cld.setTime(date);
 		int dateyear = cld.get(Calendar.YEAR);
 		int datemonth = cld.get(Calendar.MONTH);
-		
+
 		if(today.compareTo(date) > 0) { 
 			if(thismonth == datemonth && thisyear == dateyear) {
 				firstDayMonthDate= today;
@@ -783,8 +765,8 @@ public class DataAccessImplementation implements DataAccess {
 		db.getTransaction().commit();
 		db.close();
 	}
-	
-	
+
+
 	/**
 	 * This methods checks the validity of the credentials (id / password) inputed upon login.
 	 * @param ID			ID of the presumed user.
@@ -891,8 +873,8 @@ public class DataAccessImplementation implements DataAccess {
 					}
 					query = db.createQuery("SELECT u FROM User u INNER JOIN u.profile Profile WHERE" + pattern, User.class);
 				}
-				
-				
+
+
 			}
 		}
 		searchResult = query.getResultList();
@@ -915,7 +897,7 @@ public class DataAccessImplementation implements DataAccess {
 		System.out.println(username + " has been deleted");
 	}
 
-	
+
 	/**
 	 * This stores the given credit card on the database with the owner set as the given user
 	 * 
@@ -940,7 +922,7 @@ public class DataAccessImplementation implements DataAccess {
 		}
 		return cc;
 	}
-	
+
 	/**
 	 * This method deletes the given credit card from the database
 	 * 
@@ -966,7 +948,7 @@ public class DataAccessImplementation implements DataAccess {
 		}
 		db.close();
 	}
-	
+
 	/**
 	 * This method updates the default credit card value of the given user to the given credit card
 	 * 
@@ -985,7 +967,7 @@ public class DataAccessImplementation implements DataAccess {
 			user.setDefaultCreditCard(defaultcc);
 		}	
 	}
-	
+
 	/**
 	 * 
 	 * @param username
@@ -1009,19 +991,19 @@ public class DataAccessImplementation implements DataAccess {
 				db.getTransaction().begin();
 				Profile p = new Profile(username,name,surname,email, addr, phn, nat, city, birthdt,w.getProfile().getProfilepic());	
 				u = new User(username,w.getPassword(),isAdmin,p);
-				
+
 				for(Bet b : w.getBets()) {
 					b.setBettor(u);
 					u.getBets().add(b);
 				}
-				
+
 				for(String s : w.getCreditCards().keySet()) {
 					CreditCard cc = w.getCreditCards().get(s);
 					CreditCard cccopy = new CreditCard(cc.getCardNumber(), cc.getDueDate());
 					u.addCreditCard(cccopy);
 				}
 				u.setDefaultCreditCard(w.getDefaultCreditCard());
-				
+
 				db.remove(w);
 				db.persist(u);
 				db.getTransaction().commit();
@@ -1046,7 +1028,7 @@ public class DataAccessImplementation implements DataAccess {
 		System.out.println(username + " has been updated");
 		return u;
 	}
-	
+
 	/**
 	 * This method replaces the existing profile picture of the given user with the new picture.
 	 * Only the pathname of the pictures are stored
@@ -1057,18 +1039,18 @@ public class DataAccessImplementation implements DataAccess {
 	public void updateProfilePic(Profile p, String path) {
 		EntityManager db = createEntityManager();
 		Profile profile = db.find(Profile.class, p);
-		
+
 		db.getTransaction().begin();
 		profile.setProfilepic(path);
 		db.getTransaction().commit();
 		db.close();
 	}
-	
+
 
 	public Bet recordBet(User bettor, float stake, float price, BetType type, List<PredictionContainer> predictions){
 		EntityManager db = createEntityManager();
 		User u = db.find(User.class, bettor.getUsername());
-		
+
 		List<Prediction> predictionInstances = new ArrayList<Prediction>();
 		for(PredictionContainer pred : predictions){
 			TypedQuery<Prediction> query = db.createQuery("SELECT p FROM Prediction p WHERE p.question =?1 AND p.answer =?2" , Prediction.class);
@@ -1079,7 +1061,7 @@ public class DataAccessImplementation implements DataAccess {
 				predictionInstances.add(t);
 			}	
 		}
-		
+
 		db.getTransaction().begin();
 		Bet b = new Bet(bettor, stake, type, predictionInstances);
 		u.addBet(b);
@@ -1092,7 +1074,7 @@ public class DataAccessImplementation implements DataAccess {
 		return b;
 
 	}
-	
+
 	/**
 	 * This method sets the given bet's status to cancelled
 	 * and returns the amount of cash that corresponds to the
@@ -1113,12 +1095,12 @@ public class DataAccessImplementation implements DataAccess {
 		}
 		return b;
 	}
-/*
+	/*
 	public void close(){
 		db.close();
 		System.out.println("DataBase closed");
 	}
-*/
+	 */
 
 	public float addCash(String ID, float addition) {
 		EntityManager db = createEntityManager();
@@ -1134,10 +1116,10 @@ public class DataAccessImplementation implements DataAccess {
 
 	public void storeFeedback(FeedbackType fbtype, String email, String name, String summary, String details, File file) {
 		EntityManager db = createEntityManager();
-		
+
 		TypedQuery<User> query = db.createQuery("SELECT u FROM User u WHERE u.isAdmin = true", User.class);
 		List<User> admins = query.getResultList();
-		
+
 		db.getTransaction().begin();
 		Feedback fb = new Feedback(fbtype, email, name, summary, details, file);
 		db.persist(fb);
@@ -1167,7 +1149,7 @@ public class DataAccessImplementation implements DataAccess {
 		db.close();
 		return fbvector;	
 	}
-	
+
 	/**
 	 * This method retrieves FeedbackRecord objects from the database that correspond the given user.
 	 * 
@@ -1177,12 +1159,12 @@ public class DataAccessImplementation implements DataAccess {
 	public Vector<FeedbackRecord> retrieveFeedbackRecords(User u){
 		EntityManager db = createEntityManager();
 		User admin = db.find(User.class, u.getUsername());
-		
+
 		db.getTransaction().begin();
 		Vector<FeedbackRecord> fbrvector = new Vector<FeedbackRecord>();
 		TypedQuery<FeedbackRecord> query = db.createQuery("SELECT f FROM FeedbackRecord f WHERE administrator = ?1", FeedbackRecord.class);
 		query.setParameter(1, admin);
-		
+
 		List<FeedbackRecord> fbrlist = query.getResultList();
 		for(FeedbackRecord fbr:fbrlist) {
 			fbrvector.add(fbr);
@@ -1199,18 +1181,18 @@ public class DataAccessImplementation implements DataAccess {
 	@WebMethod
 	public void updateFeedBackRecords(List<FeedbackRecord> updatedrecords) {
 		EntityManager db = createEntityManager();
-		
+
 		for(FeedbackRecord fbrecord : updatedrecords) {
 			FeedbackRecord fbr = db.find(FeedbackRecord.class, fbrecord);
-			
+
 			db.getTransaction().begin();
 			fbr.setRead(true);
 			db.getTransaction().commit();
 		}
 		db.close();
 	}
-	
-	
+
+
 	public List<Prediction> getQuestionPredictions(int questionId) throws QuestionNotFound,NoAnswers {
 		EntityManager db = createEntityManager();
 		Question q = db.find(Question.class, questionId);
@@ -1257,7 +1239,7 @@ public class DataAccessImplementation implements DataAccess {
 		db.getTransaction().commit();
 		db.close();
 	}
-	
+
 
 
 	public List<Bet> getBets(String username){
@@ -1322,7 +1304,7 @@ public class DataAccessImplementation implements DataAccess {
 				predictionInstances.add(t);
 			}	
 		}
-		
+
 		db.getTransaction().begin();
 		u.setCash(b.getBettor().getCash()+(b.getStake()-stake));
 		b.setStake(stake);
@@ -1349,7 +1331,7 @@ public class DataAccessImplementation implements DataAccess {
 		db.getTransaction().commit();
 		db.close();
 	}
-	
+
 	/**
 	 * @param date Date when the event is due to start
 	 * @param des  Description of the event
@@ -1379,14 +1361,14 @@ public class DataAccessImplementation implements DataAccess {
 				db.getTransaction().commit();
 				db.close();
 			}
-		
+
 		} catch (Exception e) {
 			db.close();
 			e.printStackTrace();
 		}
 	}
-	
-	
+
+
 	/**
 	 * 
 	 * @return returns the greatest event number so if we have (2,7,3,8) it will return 8 
@@ -1415,5 +1397,35 @@ public class DataAccessImplementation implements DataAccess {
 		db.getTransaction().commit();
 		db.close();
 	}
-	
+
+
+	public void open(boolean initializeMode){
+
+		System.out.println("Opening DataAccess instance => isDatabaseLocal: "+c.isDatabaseLocal()+" getDatabBaseOpenMode: "+c.getDataBaseOpenMode());
+
+		String fileName=c.getDbFilename();
+		if (initializeMode) {
+			fileName=fileName+";drop";
+			System.out.println("Deleting the DataBase");
+		}
+
+		if (c.isDatabaseLocal()) {
+			emf = Persistence.createEntityManagerFactory("objectdb:"+fileName);
+			db = emf.createEntityManager();
+		} else {
+			Map<String, String> properties = new HashMap<String, String>();
+			properties.put("javax.persistence.jdbc.user", c.getUser());
+			properties.put("javax.persistence.jdbc.password", c.getPassword());
+
+			emf = Persistence.createEntityManagerFactory("objectdb://"+c.getDatabaseNode()+":"+c.getDatabasePort()+"/"+fileName, properties);
+
+			db = emf.createEntityManager();
+		}
+
+	}
+	public void close(){
+		db.close();
+		System.out.println("DataBase closed");
+	}
+
 }

@@ -56,11 +56,26 @@ public class BLFacadeImplementation  implements BLFacade {
 		if(c.getDataBaseOpenMode().equals("initialize")) {
 			dbManager=new DataAccessImplementation(true);
 			dbManager.initializeDB();
+			dbManager.close();
 		}
 		else {
 			dbManager=new DataAccessImplementation(false);
 		}
-	} 
+	}
+	
+	   public BLFacadeImplementation(DataAccess da)  {
+			
+			System.out.println("Creating BLFacadeImplementation instance with DataAccess parameter");
+			ConfigXML c=ConfigXML.getInstance();
+			
+			if (c.getDataBaseOpenMode().equals("initialize")) {
+				da.open(true);
+				da.initializeDB();
+				da.close();
+
+			}
+			dbManager=da;		
+		}
 
 	/** 
 	 * This method creates a question for an event, with a question text and the minimum bet
@@ -297,10 +312,14 @@ public class BLFacadeImplementation  implements BLFacade {
 	@WebMethod
 	public void setDefaultCreditCard(User u,CreditCard defaultcc) {
 		if(!defaultcc.equals(u.getDefaultCreditCard())) {
-			DataAccess dbManager = new DataAccessImplementation();
-			dbManager.updateDefaultCreditCard(u,defaultcc);
-			u.setDefaultCreditCard(defaultcc);
+			updateCreditCard(u, defaultcc);
 		}
+	}
+
+	private void updateCreditCard(User u, CreditCard defaultcc) {
+		DataAccess dbManager = new DataAccessImplementation();
+		dbManager.updateDefaultCreditCard(u, defaultcc);
+		u.setDefaultCreditCard(defaultcc);
 	}
 
 	/**
