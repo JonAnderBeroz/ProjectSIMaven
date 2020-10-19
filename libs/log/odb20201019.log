@@ -1,0 +1,20 @@
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-10-19 13:46:58 #1 store] 
+Database 'D:\eclipseWorkspace\git\ProjectSIMaven\resources\bets.temp' is opened by 10396@DESKTOP-R59AO6Q
+
+[2020-10-19 13:46:58 #2 store] 
+Configuration path: ?
+
+[2020-10-19 13:46:58 #3 type] 
+Type domain.Event is not enhanced.
+
+[2020-10-19 13:46:58 #4 type] 
+Type domain.Question is not enhanced.
+
+[2020-10-19 13:46:58 #5 type] 
+Type domain.Competition is not enhanced.
+
+[2020-10-19 13:46:58 #6 type] 
+Type domain.Prediction is not enhanced.
+
